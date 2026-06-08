@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\desalegn\\Documents\\Csharp-projects\\Guided-project-foreach-if-array-CSharp-main\\GuidedProject\\Starter\\Starter.csproj": {}
+    "C:\\Users\\desalegn\\demo101\\Starter\\Starter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\desalegn\\Documents\\Csharp-projects\\Guided-project-foreach-if-array-CSharp-main\\GuidedProject\\Starter\\Starter.csproj": {
+    "C:\\Users\\desalegn\\demo101\\Starter\\Starter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\desalegn\\Documents\\Csharp-projects\\Guided-project-foreach-if-array-CSharp-main\\GuidedProject\\Starter\\Starter.csproj",
+        "projectUniqueName": "C:\\Users\\desalegn\\demo101\\Starter\\Starter.csproj",
         "projectName": "Starter",
-        "projectPath": "C:\\Users\\desalegn\\Documents\\Csharp-projects\\Guided-project-foreach-if-array-CSharp-main\\GuidedProject\\Starter\\Starter.csproj",
+        "projectPath": "C:\\Users\\desalegn\\demo101\\Starter\\Starter.csproj",
         "packagesPath": "C:\\Users\\desalegn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\desalegn\\Documents\\Csharp-projects\\Guided-project-foreach-if-array-CSharp-main\\GuidedProject\\Starter\\obj\\",
+        "outputPath": "C:\\Users\\desalegn\\demo101\\Starter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\desalegn\\AppData\\Roaming\\NuGet\\NuGet.Config"
