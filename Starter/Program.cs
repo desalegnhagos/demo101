@@ -9,7 +9,7 @@ int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
 int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
 
 int[] studentScores = new int[10];
-
+// test comment
 string currentStudentLetterGrade = "";
 
 // display the header row for scores/grades
