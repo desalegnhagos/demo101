@@ -1,4 +1,4 @@
-
+﻿
 int examAssignments = 5;
 
 string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
@@ -16,14 +16,8 @@ string currentStudentLetterGrade = "";
 Console.Clear();
 Console.WriteLine("Student\t\tGrade\n");
 
-/*
-The outer foreach loop is used to: kdie3 if ikd ii ddikfdi dd
-- iterate through student names 
-- assign a student's grades to the studentScores array
-- sum assignment scores (inner foreach loop)
-- calculate numeric and letter grade
-- write the score report information
-*/
+
+
 foreach (string name in studentNames)
 {
     string currentStudent = name;
@@ -51,7 +45,7 @@ foreach (string name in studentNames)
         if (gradedAssignments <= examAssignments)
             sumAssignmentScores += score;
         else
-            sumAssignmentScores += score / 10;w
+            sumAssignmentScores += score / 10;
     }
 
     currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
