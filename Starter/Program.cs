@@ -14,13 +14,17 @@ string currentStudentLetterGrade = "";
 
 // display the header row for scores/grades
 Console.Clear();
-Console.WriteLine("Student\t\tGrade\n");
+Console.WriteLine("Student\t\tExam Score\tOverall\tGrade\n");
 
 
 
 foreach (string name in studentNames)
 {
     string currentStudent = name;
+     int studentExamScores = 0;
+     int studentExtraCredit = 0;
+     
+   
 
     if (currentStudent == "Sophia")
         studentScores = sophiaScores;
@@ -38,6 +42,18 @@ foreach (string name in studentNames)
     decimal currentStudentGrade = 0;
     int gradedAssignments = 0;
 
+
+    
+
+    if (studentExamScores == 0)
+        studentExamScores += 0;
+
+    if (studentExtraCredit == 0 )
+        studentExtraCredit += 0;
+
+   
+   
+
     foreach (int score in studentScores)
     {
         gradedAssignments += 1;
@@ -46,7 +62,19 @@ foreach (string name in studentNames)
             sumAssignmentScores += score;
         else
             sumAssignmentScores += score / 10;
+
+        
+          
+         
+
+
+        
+
+
+       
     }
+
+    
 
     currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
 
@@ -77,8 +105,17 @@ foreach (string name in studentNames)
     else
         currentStudentLetterGrade = "F";
 
+        
+
+        
+         
+            
+
+        
+        
+
     
-    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+    Console.WriteLine($"{currentStudent}\t\t{studentExamScores}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t\t{studentExtraCredit}" + "(0 pts)");
 }
 
 Console.WriteLine("\n\rPress the Enter key to continue");
