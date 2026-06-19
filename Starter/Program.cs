@@ -1,6 +1,7 @@
 ﻿
 int examAssignments = 5;
 
+
 string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 
 int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
@@ -12,9 +13,10 @@ int[] studentScores = new int[10];
 // test comment
 string currentStudentLetterGrade = "";
 
+
 // display the header row for scores/grades
 Console.Clear();
-Console.WriteLine("Student\t\tExam Score\tOverall\tGrade\n");
+Console.WriteLine("Student\t\tExam Score\tOverall\tGrade\t\tExtra Credit\n");
 
 
 
@@ -22,7 +24,8 @@ foreach (string name in studentNames)
 {
     string currentStudent = name;
      int studentExamScores = 0;
-     int studentExtraCredit = 0;
+     string studentExtraCredit = "0";
+     
      
    
 
@@ -41,15 +44,15 @@ foreach (string name in studentNames)
     int sumAssignmentScores = 0;
     decimal currentStudentGrade = 0;
     int gradedAssignments = 0;
-
+    string pts = " (0 pts)";
 
     
 
     if (studentExamScores == 0)
         studentExamScores += 0;
 
-    if (studentExtraCredit == 0 )
-        studentExtraCredit += 0;
+    if (studentExtraCredit == "0" )
+        studentExtraCredit = studentExtraCredit + pts;
 
    
    
@@ -69,6 +72,7 @@ foreach (string name in studentNames)
 
 
         
+
 
 
        
@@ -115,7 +119,8 @@ foreach (string name in studentNames)
         
 
     
-    Console.WriteLine($"{currentStudent}\t\t{studentExamScores}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t\t{studentExtraCredit}" + "(0 pts)");
+    Console.WriteLine($"{currentStudent}\t\t{studentExamScores}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t\t{studentExtraCredit}");
+    
 }
 
 Console.WriteLine("\n\rPress the Enter key to continue");
