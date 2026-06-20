@@ -27,6 +27,7 @@ foreach (string name in studentNames)
      string studentExtraCredit = "0";
      
      
+     
    
 
     if (currentStudent == "Sophia")
@@ -45,11 +46,14 @@ foreach (string name in studentNames)
     decimal currentStudentGrade = 0;
     int gradedAssignments = 0;
     string pts = " (0 pts)";
-
+    decimal studentExamScore = 0;
     
 
-    if (studentExamScores == 0)
-        studentExamScores += 0;
+    
+//if (studentExamScores <= examAssignments)
+       // studentExamScores += 0;
+
+    
 
     if (studentExtraCredit == "0" )
         studentExtraCredit = studentExtraCredit + pts;
@@ -66,7 +70,11 @@ foreach (string name in studentNames)
         else
             sumAssignmentScores += score / 10;
 
+            
+        if (gradedAssignments <= examAssignments)
+            studentExamScores += score;
         
+            
           
          
 
@@ -78,7 +86,7 @@ foreach (string name in studentNames)
        
     }
 
-    
+    studentExamScore = (decimal)(studentExamScores) / examAssignments;
 
     currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
 
@@ -119,7 +127,7 @@ foreach (string name in studentNames)
         
 
     
-    Console.WriteLine($"{currentStudent}\t\t{studentExamScores}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t\t{studentExtraCredit}");
+    Console.WriteLine($"{currentStudent}\t\t{studentExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t\t{studentExtraCredit}");
     
 }
 
