@@ -19,12 +19,14 @@ Console.Clear();
 Console.WriteLine("Student\t\tExam Score\tOverall\tGrade\t\tExtra Credit\n");
 
 
-
+//this foreach loop iterates through each student name in the studentNames array, calculates their exam score, overall grade, letter grade, extra credit, and more points, and then prints the results in a formatted manner.
 foreach (string name in studentNames)
 {
     string currentStudent = name;
-     int studentExamScores = 0;
-     string studentExtraCredit = "0";
+     decimal studentExamScores = 0;
+     //string studentExtraCredit = "0";
+     decimal studentExtraCredit = 0;
+    //decimal studentsMorePoints = 0;
      
      
      
@@ -45,8 +47,12 @@ foreach (string name in studentNames)
     int sumAssignmentScores = 0;
     decimal currentStudentGrade = 0;
     int gradedAssignments = 0;
-    string pts = " (0 pts)";
+    //string pts = " (0 pts)";
+    //string ptsl = "  pts";
+    //string studentsAdditionalPoints = "";
     decimal studentExamScore = 0;
+    decimal studentsMorePoints = 0;
+    
     
 
     
@@ -55,8 +61,8 @@ foreach (string name in studentNames)
 
     
 
-    if (studentExtraCredit == "0" )
-        studentExtraCredit = studentExtraCredit + pts;
+    //if (studentExtraCredit == "0" )
+       // studentExtraCredit = studentExtraCredit + pts;
 
    
    
@@ -65,14 +71,34 @@ foreach (string name in studentNames)
     {
         gradedAssignments += 1;
 
-        if (gradedAssignments <= examAssignments)
+       // if (gradedAssignments <= examAssignments)
             sumAssignmentScores += score;
-        else
+       // else
             sumAssignmentScores += score / 10;
+
+            if (gradedAssignments <= (gradedAssignments - examAssignments))
+            sumAssignmentScores += score;
 
             
         if (gradedAssignments <= examAssignments)
             studentExamScores += score;
+
+            if (gradedAssignments > examAssignments)
+            studentExtraCredit += score;
+
+          // if (gradedAssignments > examAssignments)
+            //studentExtraCredit = (studentExtraCredit/10)/examAssignments;
+            
+           // if (studentsMorePoints == studentExtraCredit/10)
+           // studentExtraCredit =  studentExtraCredit + studentsMorePoints/examAssignments;
+
+           if (gradedAssignments > examAssignments)
+            studentsMorePoints += (decimal)score/10;
+
+            //if (studentsAdditionalPoints == "studentsMorePoints")
+
+        //studentsAdditionalPoints = studentsMorePoints + ptsl;
+ 
         
             
           
@@ -86,9 +112,22 @@ foreach (string name in studentNames)
        
     }
 
+   
+
     studentExamScore = (decimal)(studentExamScores) / examAssignments;
 
-    currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
+    currentStudentGrade = (decimal)(studentExamScores + (studentExtraCredit/10)) / examAssignments;
+
+    //currentStudentGrade = (decimal)(studentExamScores + studentExtraCredit/10)/ examAssignments;
+
+   // studentsMorePoints = (decimal)(studentsMorePoints) /  examAssignments;
+
+
+     studentExtraCredit = (decimal)(studentExtraCredit) / (gradedAssignments - examAssignments);
+
+     studentsMorePoints = (decimal)(studentsMorePoints) /  examAssignments;
+
+    
 
     if (currentStudentGrade >= 97)
         currentStudentLetterGrade = "A+";
@@ -127,7 +166,7 @@ foreach (string name in studentNames)
         
 
     
-    Console.WriteLine($"{currentStudent}\t\t{studentExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t\t{studentExtraCredit}");
+    Console.WriteLine($"{currentStudent}\t\t{studentExamScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t\t{studentExtraCredit} ({studentsMorePoints} pts)");
     
 }
 
